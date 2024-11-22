@@ -1,0 +1,71 @@
+<style>
+
+
+    .container {
+    padding: 2rem;
+}
+
+.slider-warpper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden; /* Prevent scrollbars */
+    scroll-snap-type: x mandatory; /* Enable snapping for horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling between slides */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%; /* Take full width of the parent */
+    scroll-snap-align: start; /* Align images to the start of the container */
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem; /* Ensure dots are perfectly round */
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #1c1515;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+</style>
+
+
+
+<section class="container">
+    <div class="slider-warpper">
+        <div class="slider">
+            <img id="slider1" src="templates/Sunlit Solitude in the City Bustle.jpeg" alt="">
+            <img id="slider2" src="templates/Sunlit Urban Ballet.jpeg" alt="">
+            <img  id="slider3" src="templates/Urban Tapestry_ Aerial Dance at the Zebra Crossing.jpeg" alt="">
+        </div>
+        <div class="slider-nav">
+            <a href="#slider1"></a>
+            <a href="#slider2"></a>
+            <a href="#slider3"></a>
+        </div>
+    </div>
+
+</section>
