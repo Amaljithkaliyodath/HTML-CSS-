@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel</title>
+    <style>
+        body {
+            background-color: rgb(61, 60, 60);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel {
+            display: flex;
+            padding: 20px;
+            overflow-x: scroll; 
+            scrollbar-width: none;
+            scroll-behavior: smooth; 
+        }
+
+        
+
+        .card {
+            flex: 0 0 90%; 
+            max-width: 400px; 
+            margin: 10px 20px; 
+            
+        }
+
+        .card img {
+            border-radius: 5%;
+            width: 100%; 
+        }
+
+        .card h1 {
+            color: rgb(197, 162, 20);
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .card:first-child {
+            margin-left: 10%; 
+        }
+
+        /* Tablet devices (768px and above) */
+        @media (min-width: 768px) {
+            .card {
+                flex: 0 0 45%; 
+                margin: 15px;
+            }
+
+            .card:first-child {
+                margin-left: 5%; 
+            }
+        }
+
+        /* Desktop devices (1024px and above) */
+        @media (min-width: 1024px) {
+            .card {
+                flex: 0 0 30%; 
+                margin: 20px;
+            }
+
+            .card:first-child {
+                margin-left: 9%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="card">
+            <img src="Template/apple_intelligence_endframe__ksa4clua0duu_xsmall.jpg" alt="iPhone">
+            <h1>The iPhone 16 Pro Max has our largest display ever.</h1>
+        </div>
+        <div class="card">
+            <img src="Template/apple_intelligence_endframe__ksa4clua0duu_xsmall.jpg" alt="iPhone">
+            <h1>The iPhone 16 Pro Max has our largest display ever.</h1>
+        </div>
+        <div class="card">
+            <img src="Template/apple_intelligence_endframe__ksa4clua0duu_xsmall.jpg" alt="iPhone">
+            <h1>The iPhone 16 Pro Max has our largest display ever.</h1>
+        </div>
+        <div class="card">
+            <img src="Template/apple_intelligence_endframe__ksa4clua0duu_xsmall.jpg" alt="iPhone">
+            <h1>The iPhone 16 Pro Max has our largest display ever.</h1>
+        </div>
+    </div>
+</body>
+</html>
